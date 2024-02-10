@@ -1,5 +1,6 @@
 import { styled } from 'styled-components'
 import * as Dialog from '@radix-ui/react-dialog'
+import * as RadioGroup from '@radix-ui/react-radio-group'
 
 export const Overlay = styled(Dialog.Overlay)`
   position: fixed;
@@ -65,4 +66,57 @@ export const CloseButton = styled(Dialog.Close)`
   line-height: 0;
   cursor: pointer;
   color: ${(props) => props.theme['gray-500']};
+`
+
+export const TransctionType = styled(RadioGroup.Root)`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
+`
+
+/* Criando um contrato */
+interface TransctionTypeButtonProps {
+  variant: 'income' | 'outcome'
+}
+
+export const TransctionTypeButton = styled(
+  RadioGroup.Item,
+)<TransctionTypeButtonProps>`
+  background: ${(props) => props.theme['gray-700']};
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border: 0;
+  border-radius: 6px;
+  color: ${(props) => props.theme['gray-300']};
+  cursor: pointer;
+
+  svg {
+    color: ${(props) =>
+      props.variant === 'income'
+        ? props.theme['green-300']
+        : props.theme['red-300']};
+  }
+
+  // Estilizando o elemento quando o atributo 'data-state' estiver alterado
+
+  &[data-state='unchecked']:hover {
+    background: ${(props) => props.theme['gray-600']};
+    transition: 0.2s;
+  }
+
+  &[data-state='checked'] {
+    color: ${(props) => props.theme.white};
+    background-color: ${(props) =>
+      props.variant === 'income'
+        ? props.theme['green-500']
+        : props.theme['red-500']};
+
+    svg {
+      color: ${(props) => props.theme.white};
+    }
+  }
 `
