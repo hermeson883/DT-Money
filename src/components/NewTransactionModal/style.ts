@@ -49,7 +49,11 @@ export const Content = styled(Dialog.Content)`
       margin-top: 1.5rem;
       cursor: pointer;
 
-      &:hover {
+      &:disabled {
+        background: ${(props) => props.theme.white};
+        cursor: not-allowed;
+      }
+      &:not(:disabled):hover {
         background: ${(props) => props.theme['green-700']};
         transition: background-color 0.2s;
       }
@@ -101,7 +105,7 @@ export const TransctionTypeButton = styled(
         : props.theme['red-300']};
   }
 
-  // Estilizando o elemento quando o atributo 'data-state' estiver alterado
+  // Esti lizando o elemento quando o atributo 'data-state' estiver alterado
 
   &[data-state='unchecked']:hover {
     background: ${(props) => props.theme['gray-600']};

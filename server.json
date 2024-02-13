@@ -1,0 +1,37 @@
+{
+    "transactions": [
+        {
+            "id": 1,
+            "description": "Web development",
+            "type": "income",
+            "price": 1400,
+            "createdAt": "10/02/2024",
+            "category": "Venda"
+        },
+        {
+            "id": 2,
+            "description": "PS4",
+            "type": "outcome",
+            "price": 400,
+            "createdAt": "10/02/2024",
+            "category": "Compra"
+        },
+        {
+            "id": 3,
+            "description": "PS4",
+            "type": "outcome",
+            "price": 400,
+            "createdAt": "10/02/2024",
+            "category": "Compra"
+        },
+        {
+            "id": 4,
+            "description": "Salário",
+            "type": "income",
+            "price": 1400,
+            "createdAt": "10/02/2024",
+            "category": "Compra"
+        }
+    ]
+
+}
