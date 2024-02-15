@@ -3,6 +3,9 @@ import { SearchFormContainer } from './style'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useContext } from 'react'
+import { TransactionsContext } from '../../context/TransctionsContext'
+
 const serchFormSchema = z.object({
   query: z.string(),
 }) // tipando os elementos
@@ -10,6 +13,7 @@ const serchFormSchema = z.object({
 type SearchFormInputs = z.infer<typeof serchFormSchema> // extraindo a tiipagem do zod
 
 export function SearchForm() {
+  const { fetchTransactions } = useContext(TransactionsContext)
   const {
     register,
     handleSubmit,
@@ -20,8 +24,7 @@ export function SearchForm() {
 
   // data irá receber os campos do formulário
   async function handleSearchTransactions(data: SearchFormInputs) {
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-    console.log(data)
+    await fetchTransactions(data.query)
   }
 
   return (

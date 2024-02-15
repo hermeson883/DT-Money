@@ -1,37 +1,84 @@
 {
-    "transactions": [
-        {
-            "id": 1,
-            "description": "Web development",
-            "type": "income",
-            "price": 1400,
-            "createdAt": "10/02/2024",
-            "category": "Venda"
-        },
-        {
-            "id": 2,
-            "description": "PS4",
-            "type": "outcome",
-            "price": 400,
-            "createdAt": "10/02/2024",
-            "category": "Compra"
-        },
-        {
-            "id": 3,
-            "description": "PS4",
-            "type": "outcome",
-            "price": 400,
-            "createdAt": "10/02/2024",
-            "category": "Compra"
-        },
-        {
-            "id": 4,
-            "description": "Salário",
-            "type": "income",
-            "price": 1400,
-            "createdAt": "10/02/2024",
-            "category": "Compra"
-        }
-    ]
-
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Web development",
+      "type": "income",
+      "price": 1400,
+      "createdAt": "10/02/2024",
+      "category": "Venda"
+    },
+    {
+      "id": 2,
+      "description": "PS4",
+      "type": "outcome",
+      "price": 1400,
+      "createdAt": "10/02/2024",
+      "category": "Compra"
+    },
+    {
+      "id": 3,
+      "description": "PS2",
+      "type": "outcome",
+      "price": 400,
+      "createdAt": "10/02/2024",
+      "category": "Compra"
+    },
+    {
+      "id": 4,
+      "description": "Salário",
+      "type": "income",
+      "price": 1400,
+      "createdAt": "10/02/2024",
+      "category": "Compra"
+    },
+    {
+      "description": "Teste",
+      "category": "alimentação",
+      "price": 120,
+      "type": "income",
+      "createdAt": "14/02/2024",
+      "id": 5
+    },
+    {
+      "description": "Teste",
+      "category": "alimentação",
+      "price": 120,
+      "type": "income",
+      "createdAt": "14/02/2024",
+      "id": 6
+    },
+    {
+      "description": "teste2",
+      "category": "entrada",
+      "price": 500,
+      "type": "income",
+      "createdAt": "14/02/2024",
+      "id": 7
+    },
+    {
+      "description": "awawd",
+      "category": "sdasdsa",
+      "price": 800,
+      "type": "income",
+      "createdAt": "14/02/2024",
+      "id": 8
+    },
+    {
+      "description": "Oreo",
+      "category": "Comida",
+      "price": 10,
+      "type": "income",
+      "createdAt": "15/02/2024",
+      "id": 9
+    },
+    {
+      "description": "sda",
+      "category": "asdasd",
+      "price": 9,
+      "type": "income",
+      "createdAt": "15/02/2024",
+      "id": 10
+    }
+  ]
 }
